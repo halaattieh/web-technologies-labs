@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <!-- RU: Здесь указана кодировка страницы. -->
+    <!-- AR: هنا تم تحديد ترميز الصفحة. -->
+    <meta charset="UTF-8">
+
+    <!-- RU: Здесь настроена адаптивность страницы для мобильных устройств. -->
+    <!-- AR: هنا تم إعداد الصفحة لتكون مناسبة للموبايل والأجهزة المختلفة. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- RU: Здесь указан заголовок страницы. -->
+    <!-- AR: هنا يوجد عنوان الصفحة الذي يظهر في تبويب المتصفح. -->
+    <title>Собрать ланч</title>
+
+    <!-- RU: Здесь подключён Google Font Roboto. -->
+    <!-- AR: هنا تم ربط خط Roboto من Google Fonts. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- RU: Здесь подключены основной и дополнительные CSS-файлы. -->
+    <!-- AR: هنا تم ربط ملفات CSS الأساسية وملف التنسيق الخاص بالفورم. -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/lunch.css">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+
+    <!-- RU: Здесь находится шапка сайта с названием и навигацией. -->
+    <!-- AR: هنا يوجد رأس الصفحة الذي يحتوي على اسم الموقع وقائمة التنقل. -->
+    <header class="site-header">
+        <div class="container">
+
+            <!-- RU: Главный заголовок сайта. -->
+            <!-- AR: العنوان الرئيسي للموقع. -->
+            <h1>Дамаск</h1>
+
+            <!-- RU: Навигационное меню сайта. -->
+            <!-- AR: قائمة التنقل بين صفحات الموقع. -->
+            <nav aria-label="Основная навигация">
+                <a href="index.html">О нас</a>
+                <a href="collect-lunch.html" id="active">Собрать ланч</a>
+                <a href="#">Заказы</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- RU: Здесь находится основное содержимое страницы. -->
+    <!-- AR: هنا يوجد المحتوى الرئيسي للصفحة. -->
+    <main class="container">
+
+        <!-- RU: Блок с супами. -->
+        <!-- AR: قسم الشوربات. -->
+        <section>
+
+            <h2>Выберите суп</h2>
+
+    <!-- RU: Здесь находятся фильтры для супов. -->
+    <!-- AR: هنا توجد فلاتر قسم الشوربات. -->
+    <div class="filters">
+         <button type="button" data-kind="fish">рыбный</button>
+         <button type="button" data-kind="meat">мясной</button>
+         <button type="button" data-kind="veg">вегетарианский</button>
+     </div> 
+
+    <!-- RU: Здесь JavaScript добавит карточки супов. -->
+    <!-- AR: هنا سيضيف JavaScript بطاقات الشوربات. -->
+     <div class="dishes-grid" id="soup-grid"></div>
+
+        </section>
+
+
+        <!-- RU: Блок с главными блюдами. -->
+        <!-- AR: قسم الأطباق الرئيسية. -->
+        <section>
+
+            <h2>Выберите главное блюдо</h2>
+
+        <!-- RU: Здесь находятся фильтры для главных блюд. -->
+        <!-- AR: هنا توجد فلاتر قسم الأطباق الرئيسية. -->
+             <div class="filters">
+             <button type="button" data-kind="fish">рыбное</button>
+             <button type="button" data-kind="meat">мясное</button>
+             <button type="button" data-kind="veg">вегетарианское</button>
+        </div>
+
+        <!-- RU: Здесь JavaScript добавит карточки главных блюд. -->
+        <!-- AR: هنا سيضيف JavaScript بطاقات الأطباق الرئيسية. -->
+         <div class="dishes-grid" id="main-dish-grid"></div>
+
+        </section>
+
+        <!-- RU: Блок с салатами и стартерами. -->
+        <!-- AR: قسم السلطات والمقبلات. -->
+        <section>
+
+            <h2>Выберите салат или стартер</h2>
+
+         <!-- RU: Здесь находятся фильтры для салатов и стартеров. -->
+         <!-- AR: هنا توجد فلاتر قسم السلطات والمقبلات. -->
+         <div class="filters">
+             <button type="button" data-kind="fish">рыбный</button>
+            <button type="button" data-kind="meat">мясной</button>
+            <button type="button" data-kind="veg">вегетарианский</button>
+        </div>
+
+        <!-- RU: Здесь JavaScript добавит карточки салатов и стартеров. -->
+        <!-- AR: هنا سيضيف JavaScript بطاقات السلطات والمقبلات. -->
+        <div class="dishes-grid" id="salad-grid"></div>
+
+        </section>
+
+        <!-- RU: Блок с напитками. -->
+        <!-- AR: قسم المشروبات. -->
+        <section>
+
+            <h2>Выберите напиток</h2>
+
+        <!-- RU: Здесь находятся фильтры для напитков. -->
+        <!-- AR: هنا توجد فلاتر قسم المشروبات. -->
+        <div class="filters">
+            <button type="button" data-kind="cold">холодный</button>
+            <button type="button" data-kind="hot">горячий</button>
+        </div>
+
+        <!-- RU: Здесь JavaScript добавит карточки напитков. -->
+        <!-- AR: هنا سيضيف JavaScript بطاقات المشروبات. -->
+         <div class="dishes-grid" id="drink-grid"></div>
+
+        </section>
+
+        <!-- RU: Блок с десертами. -->
+        <!-- AR: قسم الحلويات. -->
+        <section>
+
+             <h2>Выберите десерт</h2>
+
+        <!-- RU: Здесь находятся фильтры для десертов. -->
+        <!-- AR: هنا توجد فلاتر قسم الحلويات. -->
+        <div class="filters">
+             <button type="button" data-kind="small">маленькая порция</button>
+             <button type="button" data-kind="medium">средняя порция</button>
+            <button type="button" data-kind="large">большая порция</button>
+        </div>
+
+        <!-- RU: Здесь JavaScript добавит карточки десертов. -->
+        <!-- AR: هنا سيضيف JavaScript بطاقات الحلويات. -->
+            <div class="dishes-grid" id="dessert-grid"></div>
+
+        </section>
+
+        <!-- RU: Здесь находится форма оформления заказа. -->
+        <!-- AR: هنا يوجد نموذج إنشاء الطلب. -->
+        <section class="order-section">
+
+            <h2 class="order-title">Сделать заказ</h2>
+
+            <!-- RU: Форма отправляет данные методом POST на httpbin.org. -->
+            <!-- AR: النموذج يرسل البيانات بطريقة POST إلى موقع httpbin.org. -->
+            <form action="https://httpbin.org/post" method="post" class="order-form">
+
+
+                <!-- RU: Левая часть формы с выбранными блюдами. -->
+                <!-- AR: القسم الأيسر من النموذج لاختيار الأطعمة. -->
+                <div class="form-column">
+
+                    <h3>Ваш заказ</h3>
+
+                <!-- RU: Здесь JavaScript будет показывать выбранные блюда. -->
+                <!-- AR: هنا سيعرض JavaScript الأطباق التي اختارها المستخدم. -->
+                 <div id="selected-dishes">
+
+                <!-- RU: Если блюда ещё не выбраны, показывается это сообщение. -->
+                 <!-- AR: إذا لم يتم اختيار أي طبق بعد، تظهر هذه الرسالة. -->
+                 <p id="nothing-selected">Ничего не выбрано</p>
+
+                </div>
+                   
+
+                    <!-- RU: Поле для комментария к заказу. -->
+                    <!-- AR: حقل لكتابة تعليق أو ملاحظة على الطلب. -->
+                    <div class="form-group">
+                        <label for="comment">Комментарий к заказу</label>
+                        <textarea id="comment" name="comment" rows="6"></textarea>
+                    </div>
+
+                </div>
+
+
+                <!-- RU: Правая часть формы с данными клиента. -->
+                <!-- AR: القسم الأيمن من النموذج لمعلومات الزبون. -->
+                <div class="form-column">
+
+                    <h3>Ваши данные</h3>
+
+
+                    <!-- RU: Поле для ввода имени клиента. -->
+                    <!-- AR: حقل إدخال اسم الزبون. -->
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+
+                    <!-- RU: Поле для ввода электронной почты. -->
+                    <!-- AR: حقل إدخال البريد الإلكتروني. -->
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+
+                    <!-- RU: Чекбокс подписки на скидки и акции. -->
+                    <!-- AR: مربع اختيار للاشتراك بالعروض والحسومات. -->
+                    <div class="checkbox-group">
+                        <input
+                            type="checkbox"
+                            id="subscribe"
+                            name="subscribe"
+                            value="yes"
+                            checked>
+
+                        <label for="subscribe">
+                            Получать информацию о скидках и акциях
+                        </label>
+                    </div>
+
+
+                    <!-- RU: Поле для ввода номера телефона. -->
+                    <!-- AR: حقل إدخال رقم الهاتف. -->
+                    <div class="form-group">
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+
+                    <!-- RU: Поле для ввода адреса доставки. -->
+                    <!-- AR: حقل إدخال عنوان التوصيل. -->
+                    <div class="form-group">
+                        <label for="address">Адрес доставки</label>
+                        <input type="text" id="address" name="address" required>
+
+                        <p class="form-hint">
+                            Доставка осуществляется только по Москве
+                        </p>
+                    </div>
+
+
+                    <!-- RU: Выбор времени доставки с помощью radio-кнопок. -->
+                    <!-- AR: اختيار طريقة وقت التوصيل باستخدام أزرار radio. -->
+                    <fieldset class="delivery-fieldset">
+
+                        <legend>Время доставки:</legend>
+
+                        <div class="radio-group">
+                            <input
+                                type="radio"
+                                id="asap"
+                                name="delivery-option"
+                                value="as-soon-as-possible"
+                                required>
+
+                            <label for="asap">
+                                Как можно скорее
+                            </label>
+                        </div>
+
+                        <div class="radio-group">
+                            <input
+                                type="radio"
+                                id="specific-time"
+                                name="delivery-option"
+                                value="specific-time">
+
+                            <label for="specific-time">
+                                К указанному времени
+                            </label>
+                        </div>
+
+                    </fieldset>
+
+
+                    <!-- RU: Поле для выбора точного времени доставки. -->
+                    <!-- AR: حقل لتحديد وقت التوصيل بشكل دقيق. -->
+                    <div class="form-group">
+                        <label for="delivery-time">
+                            Укажите время доставки
+                        </label>
+
+                        <input
+                            type="time"
+                            id="delivery-time"
+                            name="delivery-time"
+                            min="07:00"
+                            max="23:00"
+                            step="300">
+
+                        <p class="form-hint">
+                            Доступное время доставки с 7:00 до 23:00
+                        </p>
+                    </div>
+
+
+                    <!-- RU: Кнопки очистки и отправки формы. -->
+                    <!-- AR: أزرار مسح النموذج وإرساله. -->
+                    <div class="form-buttons">
+
+                        <button type="reset">
+                            Сбросить
+                        </button>
+
+                        <button type="submit">
+                            Отправить
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- RU: Здесь находится подвал сайта с контактной информацией. -->
+    <!-- AR: هنا يوجد تذييل الصفحة وفيه معلومات التواصل. -->
+    <footer id="contacts" class="site-footer">
+        <div class="container">
+           <p>
+              Позвонить нам:
+              <a href="tel:+74951234567">+7-495-123-45-67</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- RU: Здесь подключён файл с массивом блюд. -->
+<!-- AR: هنا تم ربط ملف مصفوفة الأطباق. -->
+<script src="scripts/dishes.js"></script>
+
+<!-- RU: Здесь подключён основной JavaScript-файл страницы. -->
+<!-- AR: هنا تم ربط ملف JavaScript الرئيسي للصفحة. -->
+<script src="scripts/script.js"></script>
+
+</body>
+
+</html>

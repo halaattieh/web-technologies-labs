@@ -1,0 +1,169 @@
+/* RU: Основной блок формы заказа. */
+/* AR: القسم الرئيسي لنموذج الطلب. */
+.order-section {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
+/* RU: Заголовок формы расположен по центру. */
+/* AR: عنوان النموذج في المنتصف. */
+.order-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/* RU: Форма разделена на две колонки. */
+/* AR: النموذج مقسوم إلى عمودين. */
+.order-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+
+/* RU: Каждая колонка формы. */
+/* AR: كل عمود داخل النموذج. */
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+/* RU: Заголовок каждой колонки. */
+/* AR: عنوان كل عمود. */
+.form-column h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+/* RU: Группа label и поля ввода. */
+/* AR: مجموعة العنوان والحقل. */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* RU: Размер текста label. */
+/* AR: حجم نص العناوين. */
+.form-group label,
+.delivery-fieldset legend {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+/* RU: Стили для input, select и textarea. */
+/* AR: تنسيق الحقول والقوائم ومربع التعليق. */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    font-family: inherit;
+    border: 1px solid #777;
+    background-color: white;
+}
+
+
+/* RU: Высота выпадающих списков. */
+/* AR: ارتفاع القوائم المنسدلة. */
+.form-group select {
+    height: 48px;
+}
+
+
+/* RU: Настройка textarea. */
+/* AR: تنسيق مربع التعليق. */
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+
+/* RU: Чекбокс и текст расположены в одной строке. */
+/* AR: مربع الاختيار والنص في سطر واحد. */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+}
+
+
+/* RU: Группа переключателей radio. */
+/* AR: مجموعة أزرار الاختيار radio. */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+
+/* RU: Убираем стандартную рамку у fieldset. */
+/* AR: إزالة الإطار الافتراضي حول مجموعة وقت التوصيل. */
+.delivery-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* RU: Подсказка под полями. */
+/* AR: النص التوضيحي تحت الحقول. */
+.form-hint {
+    margin: 0;
+    font-style: italic;
+    font-size: 16px;
+}
+
+
+/* RU: Кнопки расположены в одну строку. */
+/* AR: الأزرار بجانب بعضها. */
+.form-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+/* RU: Оформление кнопок формы. */
+/* AR: تنسيق أزرار النموذج. */
+.form-buttons button {
+    padding: 12px;
+    font-size: 18px;
+    font-family: inherit;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+
+/* RU: Изменение фона кнопки при наведении. */
+/* AR: تغيير لون الزر عند تمرير الماوس. */
+.form-buttons button:hover {
+    background-color: tomato;
+}
+
+
+/* RU: Адаптивность формы для небольших экранов. */
+/* AR: جعل النموذج مناسب للشاشات الصغيرة. */
+@media (max-width: 700px) {
+
+    .order-form {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .order-title {
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,122 @@
+<!-- RU: Здесь указаны тип HTML-документа и язык страницы.
+     AR: هنا تم تحديد نوع مستند HTML ولغة الصفحة. -->
+<!DOCTYPE html>
+<html lang="ru">
+<!-- RU: Здесь находятся настройки страницы, подключение шрифта и CSS-файла.
+     AR: هنا توجد إعدادات الصفحة وربط الخط وملف CSS. -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дамаск — сирийская кухня</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <!-- RU: Здесь находится шапка сайта с названием и навигацией.
+         AR: هنا يوجد رأس الموقع مع الاسم وقائمة التنقل. -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Дамаск</h1>
+            <!-- RU: Здесь находятся ссылки для перехода по разделам сайта.
+                    AR: هنا توجد روابط للانتقال بين أقسام الموقع. -->
+            <nav aria-label="Основная навигация">
+                <a href="#about">О нас</a>
+                <a href="collect-lunch.html">Собрать ланч</a>
+                <a href="orders.html">Заказы</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- RU: Здесь находится основное содержимое страницы.
+       AR: هنا يوجد المحتوى الرئيسي للصفحة. -->
+    <main class="container">
+        <!-- RU: Здесь находится информация о ресторане, изображение и текст.
+        AR: هنا توجد معلومات عن المطعم مع صورة ونص. -->
+        <section id="about" class="about">
+            <img src="images/syrian-kitchen.png" alt="Традиционные блюда сирийской кухни на столе">
+            <h2>О нас</h2>
+            <p>
+                «Дамаск» — доставка настоящей сирийской кухни в Москве. Мы готовим по семейным
+                рецептам и привозим свежие горячие блюда в любую точку города к назначенному времени.
+            </p>
+        </section>
+
+        <!-- RU: Здесь находится список преимуществ ресторана.
+        AR: هنا توجد قائمة بمميزات المطعم. -->
+        <section class="advantages">
+            <h2>Почему выбирают «Дамаск»</h2>
+            <ul>
+                <li>Готовим традиционные сирийские блюда только из свежих продуктов</li>
+                <li>Бережно упаковываем каждый заказ в удобные контейнеры бесплатно</li>
+                <li>Доставляем горячие обеды ежедневно с 10:00 до 23:00</li>
+            </ul>
+        </section>
+
+        <!-- RU: Здесь находится Таблица с пятью популярными сирийскими блюдами.
+         AR: جدول يحتوي على خمسة أطباق سورية مشهورة. -->
+        <section class="popular-dishes">
+            <h2>Топ-5 сирийских блюд</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">№</th>
+                            <th scope="col">Название</th>
+                            <th scope="col">Кол-во заказов<br>в неделю</th>
+                            <th scope="col">Цена</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Киббе</td>
+                            <td>196</td>
+                            <td>390₽</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Шиш-таук</td>
+                            <td>174</td>
+                            <td>450₽</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Долма по-сирийски</td>
+                            <td>158</td>
+                            <td>370₽</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Фаттуш</td>
+                            <td>143</td>
+                            <td>310₽</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Хумус с питой</td>
+                            <td>129</td>
+                            <td>290₽</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- RU: Здесь находится контактная информация и номер телефона.
+         AR: هنا توجد معلومات التواصل ورقم الهاتف. -->
+    <footer id="contacts" class="site-footer">
+        <div class="container">
+            <p>
+                Заказать по телефону: 
+                <a href="tel:+74951234567">+7-495-123-45-67</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+/* RU: Здесь настраивается сетка с блюдами. */
+/* AR: هنا يتم تنظيم بطاقات الأطباق ضمن شبكة. */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+
+/* RU: Здесь оформляется карточка каждого блюда. */
+/* AR: هنا يتم تنسيق بطاقة كل طبق. */
+.dish-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    background-color: white;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    border: 2px solid transparent;
+}
+
+
+/* RU: При наведении появляется рамка цвета tomato. */
+/* AR: عند تمرير الماوس على البطاقة يظهر إطار بلون tomato. */
+.dish-card:hover {
+    border: 2px solid tomato;
+}
+
+
+/* RU: Здесь настраиваются изображения блюд. */
+/* AR: هنا يتم تنسيق صور الأطباق. */
+.dish-card img {
+    width: 100%;
+    border-radius: 35px;
+}
+
+
+/* RU: Здесь увеличен размер текста с ценой. */
+/* AR: هنا تم تكبير حجم نص السعر. */
+.price {
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+
+/* RU: Здесь увеличен размер названия блюда. */
+/* AR: هنا تم تكبير حجم اسم الطبق. */
+.dish-name {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+
+/* RU: Здесь вес или объём блюда сделан серым цветом. */
+/* AR: هنا تم جعل الوزن أو الحجم باللون الرمادي. */
+.weight {
+    color: gray;
+    margin-top: auto;
+}
+
+
+/* RU: Здесь оформляется кнопка "Добавить". */
+/* AR: هنا يتم تنسيق زر "Добавить". */
+.dish-card button {
+    background-color: #f1eee9;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* RU: При наведении на карточку меняется цвет кнопки. */
+/* AR: عند تمرير الماوس على البطاقة يتغير لون الزر. */
+.dish-card:hover button {
+    background-color: tomato;
+}
+
+
+/* RU: Здесь активная ссылка меню выделяется цветом tomato. */
+/* AR: هنا يتم تمييز رابط الصفحة الحالية بلون tomato. */
+#active {
+    color: tomato;
+}
+
+
+/* RU: Навигационное меню сделано flex-контейнером. */
+/* AR: هنا تم جعل قائمة التنقل باستخدام Flexbox. */
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* RU: Здесь настраивается адаптивность для экранов до 800px. */
+/* AR: هنا يتم تعديل الصفحة للشاشات حتى عرض 800 بكسل. */
+@media (max-width: 800px) {
+
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        justify-content: space-between;
+    }
+}
+
+
+/* RU: Здесь настраивается адаптивность для экранов до 600px. */
+/* AR: هنا يتم تعديل الصفحة للشاشات حتى عرض 600 بكسل. */
+@media (max-width: 600px) {
+
+    /* RU: Главный заголовок выравнивается по центру. */
+    /* AR: العنوان الرئيسي يصبح في المنتصف. */
+    h1 {
+        text-align: center;
+    }
+
+    /* RU: Навигация становится вертикальной. */
+    /* AR: قائمة التنقل تصبح عمودية. */
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* RU: Размер ссылок меню увеличивается на 4px. */
+    /* AR: يتم تكبير حجم روابط القائمة 4 بكسل. */
+    nav a {
+        font-size: 24px;
+    }
+
+    /* RU: Заголовки разделов выравниваются по центру. */
+    /* AR: عناوين الأقسام تصبح في المنتصف. */
+    section h2 {
+        text-align: center;
+    }
+
+    /* RU: На маленьких экранах блюда располагаются в одну колонку. */
+    /* AR: على الشاشات الصغيرة تصبح البطاقات بعمود واحد. */
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+}

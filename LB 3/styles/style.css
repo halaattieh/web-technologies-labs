@@ -1,0 +1,266 @@
+/* RU: Здесь я применила box-sizing ко всем элементам.
+   AR: هنا طبّقت box-sizing على جميع العناصر. */
+* {
+    box-sizing: border-box;
+}
+
+/* RU: Здесь я добавила плавную прокрутку к разделам страницы.
+   AR:  هنا أضفت انتقالًا سلسًا إلى أقسام الصفحة. */
+html {
+    scroll-behavior: smooth;
+}
+
+/* RU: Здесь я настроила шрифт, размер и цвет текста страницы.
+   AR: هنا نسّقت نوع الخط وحجمه ولون نص الصفحة. */
+body {
+    margin: 0;
+    color: #271c18;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.35;
+}
+
+/* RU: Этот контейнер ограничивает ширину и ставит содержимое по центру.
+   AR: هذه الحاوية تحدد عرض المحتوى وتضعه في منتصف الصفحة.  */
+.container {
+    width: min(100% - 80px, 1200px);
+    margin: 0 auto;
+}
+
+/* RU:  Здесь я добавила внутренние отступы для шапки сайта.
+   AR:  هنا أضفت الحشوات الداخلية لترويسة الموقع. */
+.site-header {
+    margin: 0;
+    padding: 64px 0 52px;
+}
+/* RU: Здесь я убрала верхний отступ у заголовков, абзацев и списка.
+    AR: هنا أزلت الهامش العلوي من العناوين والفقرات والقائمة. */
+h1,
+h2,
+p,
+ul {
+    margin-top: 0;
+}
+
+/* RU: Здесь я настроила главный заголовок страницы.
+   AR:هنا نسّقت العنوان الرئيسي للصفحة. */
+h1 {
+    margin-bottom: 52px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #8f2d21;
+}
+
+/* RU: Здесь я настроила блок навигации.
+   AR: هنا نسقت قسم التنقل. */
+nav {
+    margin: 0;
+    padding: 0;
+}
+/* RU:  Здесь я оформила ссылки в навигации.
+   AR:  هنا نسقت الروابط في قائمة التنقل. */
+nav a {
+    margin-right: 38px;
+    color: #000;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
+}
+/* RU: Здесь я убрала правый отступ у последней ссылки.
+   AR: هنا أزلت الهامش الأيمن من آخر رابط. */
+nav a:last-child {
+    margin-right: 0;
+}
+
+/* RU: Здесь я изменила цвет ссылок при наведении мыши.
+   AR: هنا غيرت لون الروابط عند تمرير مؤشر الفأرة. */
+a:hover,
+a:focus-visible {
+    color: #b6452f;
+}
+
+/* RU: Здесь я добавила отступы для основного содержимого.
+   AR: هنا أضفت مسافات للمحتوى الرئيسي. */
+main {
+    margin: 0 auto;
+    padding: 0 0 70px;
+}
+/* RU: Здесь я настроила отступы между разделами.
+   AR: هنا نسقت المسافات بين أقسام الصفحة. */
+section {
+    margin: 0 0 42px;
+    padding: 0;
+}
+
+/* RU: Здесь я настроила изображение в разделе о ресторане.
+   AR: هنا نسقت الصورة في قسم معلومات المطعم. */
+.about img {
+    display: block;
+    width: 100%;
+    height: 600px;
+    margin: 0 0 8px;
+    object-fit: cover;
+}
+
+/* RU: Здесь я настроила заголовки второго уровня.
+   AR: هنا نسقت العناوين من المستوى الثاني. */
+h2 {
+    margin-bottom: 28px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+/* RU: Здесь я настроила отступ под заголовком раздела о ресторане.
+   AR: هنا نسقت المسافة تحت عنوان قسم المطعم. */
+.about h2 {
+    margin-bottom: 30px;
+}
+/* RU: Здесь я оформила текст в разделе о ресторане.
+   AR: هنا نسقت النص في قسم معلومات المطعم. */
+.about p {
+    margin-bottom: 0;
+    font-size: 22px;
+}
+/* RU: Здесь я добавила верхний отступ для блока преимуществ.
+   AR: هنا أضفت مسافة علوية لقسم المميزات. */
+.advantages {
+    margin-top: 46px;
+}
+/* RU: Здесь я оформила список преимуществ.
+   AR: هنا نسقت قائمة المميزات. */
+.advantages ul {
+    margin-bottom: 0;
+    padding-left: 24px;
+}
+
+/* RU: Здесь я настроила блок с популярными блюдами.
+   AR: هنا نسقت قسم الأطباق المشهورة. */
+.popular-dishes {
+    margin-top: 48px;
+    margin-bottom: 0;
+}
+/* RU: Здесь я настроила контейнер для таблицы.
+   AR: هنا نسقت الحاوية الخاصة بالجدول. */
+.table-wrapper {
+    width: 780px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+}
+
+/* RU: Здесь я настроила размеры и границы таблицы.
+   AR: هنا نسقت حجم الجدول وحدوده. */
+table {
+    width: 100%;
+    min-width: 650px;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+/* RU: Здесь я оформила ячейки таблицы и выравнивание текста.
+   AR: هنا نسقت خلايا الجدول ومحاذاة النص. */
+th,
+td {
+    padding: 16px 14px;
+    border: 1px solid #000;
+    text-align: center;
+}
+/* RU: Здесь я сделала заголовки таблицы жирными.
+   AR: هنا جعلت عناوين الجدول بخط عريض. */
+th {
+    font-weight: 700;
+}
+/* RU: Здесь я настроила ширину первого столбца.
+   AR: هنا حددت عرض العمود الأول. */
+th:first-child,
+td:first-child {
+    width: 54px;
+}
+/* RU: Здесь я настроила ширину второго столбца.
+   AR: هنا حددت عرض العمود الثاني. */
+th:nth-child(2) {
+    width: 52%;
+}
+
+/* RU: Здесь я оформила footer с чёрным фоном и белым текстом.
+   AR: هنا نسقت تذييل الصفحة بخلفية سوداء ونص أبيض. */
+.site-footer {
+    margin: 0;
+    padding: 42px 0;
+    background-color: black;
+    color: white;
+}
+/* RU: Здесь я убрала отступ у текста в footer.
+   AR: هنا أزلت الهامش من النص داخل تذييل الصفحة. */
+.site-footer p {
+    margin: 0;
+}
+/* RU: Здесь я оформила ссылку в footer.
+   AR: هنا نسقت الرابط الموجود في تذييل الصفحة. */
+.site-footer a {
+    color: white;
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    color: #ff8a5b;
+}
+/* RU: Здесь я добавила адаптивные стили для экранов до 700 пикселей.
+   AR: هنا أضفت تنسيقات متجاوبة للشاشات حتى 700 بكسل. */
+@media (max-width: 700px) {
+    body {
+        font-size: 17px;
+    }
+/* RU: Уменьшаю ширину контейнера на маленьких экранах.
+   AR: هنا أقلل عرض الحاوية على الشاشات الصغيرة. */
+    .container {
+        width: min(100% - 32px, 1200px);
+    }
+
+    .site-header {
+        padding: 36px 0 34px;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+        font-size: 34px;
+    }
+/* RU: Здесь ссылки навигации переносятся на новую строку.
+   AR: هنا تسمح روابط التنقل بالانتقال إلى سطر جديد. */
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px 22px;
+    }
+
+    nav a {
+        margin-right: 0;
+        font-size: 19px;
+    }
+/* RU: Здесь изображение адаптируется под размер экрана.
+   AR: هنا تتكيف الصورة مع حجم الشاشة. */
+    .about img {
+        height: 55vw;
+        min-height: 220px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 27px;
+    }
+
+    .about p {
+        font-size: 18px;
+    }
+
+    .site-footer {
+        padding: 30px 0;
+    }
+}
